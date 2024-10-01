@@ -7,10 +7,10 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <div className="w-full bg-white px-10 py-4 rounded-full shadow-md mx-3 my-3 mr-3">
-      <nav className="flex justify-between items-center align-middle">
+    <div className="bg-white px-10 py-4 rounded-2xl shadow-md mx-3 my-3 ">
+      <nav className="flex justify-between items-center">
         {/* Left Section */}
-        <div className="flex gap-8">
+        <div className="flex gap-8 flex-1">
           <Link href="#" className="flex items-center gap-1 font-medium">
             New Drops <FcFlashOn />
           </Link>
@@ -23,18 +23,18 @@ function Navbar() {
         </div>
 
         {/* Center Section */}
-        <div>
+        <div className="flex justify-center">
           <h1 className="text-2xl font-extrabold tracking-wide">
-            ANIME <span className="text-blue-600">CANVAS</span>
+            ANIME CANVAS
           </h1>
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 flex-1 justify-end">
           <Link href="#" className="flex items-center">
             <BiSearch className="text-xl" />
           </Link>
-          <Link href="#" className="flex items-center">
+          <Link href="#" className="flex items-center p-2 rounded-full">
             <BsCart2 className="text-xl" />
           </Link>
         </div>

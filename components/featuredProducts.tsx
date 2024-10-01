@@ -1,119 +1,90 @@
-import React from 'react';
+import React from "react";
 
-const products = [
-  { id: 1, name: 'ADIDAS 4DFWD X PARLEY RUNNING SHOES', price: '$125', imageUrl: 'link-to-shoe1-image' },
-  { id: 2, name: 'ADIDAS 4DFWD X PARLEY RUNNING SHOES', price: '$125', imageUrl: 'link-to-shoe2-image' },
-  { id: 3, name: 'ADIDAS 4DFWD X PARLEY RUNNING SHOES', price: '$125', imageUrl: 'link-to-shoe3-image' },
-  { id: 4, name: 'ADIDAS 4DFWD X PARLEY RUNNING SHOES', price: '$125', imageUrl: 'link-to-shoe4-image' },
+// Define a custom type for Product
+interface Product {
+  id: number;
+  name: string;
+  price: string;
+  imageUrl: string;
+}
+
+const products: Product[] = [
+  {
+    id: 1,
+    name: "Onepiece Goku shirt",
+    price: "$125",
+    imageUrl: "anime.jpg",
+  },
+  {
+    id: 2,
+    name: "Baki Hanma shirt",
+    price: "$125",
+    imageUrl: "anime.jpg",
+  },
+  {
+    id: 3,
+    name: "mob psycho shirt",
+    price: "$125",
+    imageUrl: "anime.jpg",
+  },
+  {
+    id: 4,
+    name: "motorcycle shirt",
+    price: "$125",
+    imageUrl: "anime.jpg",
+  },
 ];
 
-// Define a custom type for styles
-interface StyleProperties extends React.CSSProperties {
-  [key: string]: any; // Allow additional properties
-}
-
-const styles: { [key: string]: StyleProperties } = {
-  container: {
-    backgroundColor: '#f3f4f6',
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-    textAlign: 'center',
-    maxWidth: '1200px',
-    margin: '0 auto',
-  },
-  header: {
-    fontSize: '2.5rem',
-    marginBottom: '20px',
-  },
-  button: {
-    backgroundColor: '#3264fe',
-    color: '#fff',
-    padding: '10px 20px',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    marginBottom: '40px',
-  },
-  productList: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    gap: '15px',
-  },
-  productCard: {
-    backgroundColor: '#fff',
-    borderRadius: '10px',
-    padding: '15px',
-    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-    width: '23%',
-    textAlign: 'center',
-    position: 'relative',
-  },
-  productContainer: {
-    position: 'relative',
-  },
-  productImage: {
-    width: '100%',
-    height: 'auto',
-    borderRadius: '10px',
-    marginBottom: '15px',
-  },
-  productName: {
-    fontSize: '1rem',
-    fontWeight: 'bold',
-    marginBottom: '10px',
-  },
-  productPrice: {
-    color: '#ff6b6b',
-    fontSize: '1.2rem',
-    fontWeight: 'bold',
-    marginBottom: '10px',
-  },
-  newBadge: {
-    backgroundColor: '#3264fe',
-    color: '#fff',
-    padding: '3px 8px',
-    borderRadius: '4px',
-    fontSize: '0.7rem',
-    position: 'absolute',
-    top: '15px',
-    left: '15px',
-  },
-  viewProductButton: {
-    backgroundColor: '#000',
-    color: '#fff',
-    padding: '10px 15px',
-    border: 'none',
-    cursor: 'pointer',
-    borderRadius: '4px',
-  },
-};
-
-function ProductCard({ product }: { product: { id: number; name: string; price: string; imageUrl: string } }) {
+// ProductCard component
+const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   return (
-    <div style={styles.productCard}>
-      <div style={styles.productContainer}>
-        <span style={styles.newBadge}>New</span>
-        <img style={styles.productImage} src={product.imageUrl} alt={product.name} />
+    <div>
+      <div className="bg-white flex rounded-lg p-10 shadow-lg border-gray-200 relative">
+        {/* New Badge */}
+        <span className="absolute top-3 left-3 bg-black text-white text-xs py-1 px-2 rounded z-10 drop-shadow-md animate-pulse">
+          New
+        </span>
+
+        {/* Product Image */}
+        <img
+          className="w-auto h-auto relative z-0"
+          src={product.imageUrl}
+          alt={product.name}
+        />
       </div>
-      <h3 style={styles.productName}>{product.name}</h3>
-      <p style={styles.productPrice}>{product.price}</p>
-      <button style={styles.viewProductButton}>View Product</button>
+
+      {/* Product Name */}
+      <h3 className="text-lg font-bold mb-2 text-gray-900">{product.name}</h3>
+
+      {/* View Product Button with Price */}
+      <button className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800 transition font-bold w-full items-center">
+        <span>VIEW PRODUCT</span>
+      </button>
     </div>
   );
-}
+};
 
-function FeaturedProducts() {
+// FeaturedProducts component
+const FeaturedProducts: React.FC = () => {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.header}>Don't Miss Out<br />New Drops</h1>
-      <button style={styles.button}>Shop New Drops</button>
-      <div style={styles.productList}>
+    <div className="mx-7 my-14 font-sans text-center max-w-6xl ">
+      <div className="flex justify-between items-center">
+        <h1 className="text-5xl font-bold mb-6 text-left flex-grow">
+          Don't Miss Out
+          <br />
+          New Drops
+        </h1>
+        <button className="bg-black text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition">
+          Shop New Drops
+        </button>
+      </div>
+      <div className="flex gap-12 w-full">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default FeaturedProducts;
