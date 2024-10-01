@@ -4,21 +4,27 @@ import FeaturedProducts from "@/components/featuredProducts";
 import Image from "next/image";
 import Review from "@/components/review";
 import Footer from "@/components/footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <FeaturedProducts />
+      <div id="Drops">
+        <FeaturedProducts />
+      </div>
+
       <div className="bg-black">
         {/* Header Section */}
         <div className="flex justify-between items-center align-middle px-10 py-20">
           <h1 className="text-7xl text-white">Categories</h1>
           <div className="bg-white text-black  p-2 rounded">
-            <BsArrowUpRightSquareFill size={25} />
+            <Link href="/listing">
+              <BsArrowUpRightSquareFill size={25} />
+            </Link>
           </div>
         </div>
-        
+
         {/* Categories Section */}
         <div className="grid grid-cols-2 justify-end w-full pl-24">
           {/* Lifestyle Shoes */}
@@ -49,9 +55,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </div>
-        <Review />
-        <Footer/>
+      </div>
+      <Review />
     </div>
   );
 }

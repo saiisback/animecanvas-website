@@ -74,7 +74,7 @@ const FeaturedProducts: React.FC = () => {
           <br />
           New Drops
         </h1>
-        <button className="bg-black text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition">
+        <button className="bg-black text-white py-3 px-8 rounded-lg hover:bg-gray-600 transition">
           Shop New Drops
         </button>
       </div>

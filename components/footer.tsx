@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -8,9 +9,9 @@ function Footer() {
         <h1 className="text-4xl">ANIME CANVAS</h1>
         <div>
           <ul>
-            <li>New Drops</li>
-            <li>Shop</li>
-            <li>Social Media</li>
+            <li><Link href="/#Drops">New Drops</Link></li>
+            <li><Link href="/listing">Shop</Link></li>
+            <li><Link href="https://www.instagram.com/animecanvas.in/">Social Media</Link></li>
           </ul>
         </div>
         <div>

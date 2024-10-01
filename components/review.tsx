@@ -77,7 +77,7 @@ const Review = () => {
         <h1 className="text-5xl font-bold mb-6 text-left flex-grow">
           REVIEWS
         </h1>
-        <button className="bg-black text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition">
+        <button className="bg-black text-white py-3 px-8 rounded-lg hover:bg-gray-600 transition">
           SEE ALL
         </button>
       </div>

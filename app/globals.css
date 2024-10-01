@@ -2,3 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    font-family: var(--font-poppins), sans-serif;
+  }
+
+
+/* For WebKit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+  height: 8px; /* Scrollbar height for horizontal scrolling */
+}
+
+::-webkit-scrollbar-track {
+  background: white; /* Background of the scrollbar */
+  border-radius: 10px; /* Rounded corners of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black; /* Scroll thumb (the draggable part) */
+  border-radius: 10px; /* Rounded corners of the thumb */
+  border: 2px solid white; /* Add a border to create spacing between thumb and track */
+}
+
+/* Optional: Hide scrollbar on specific elements */
+.hidden-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* For WebKit-based browsers */
+}

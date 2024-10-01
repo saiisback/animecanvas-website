@@ -11,13 +11,13 @@ function Navbar() {
       <nav className="flex justify-between items-center">
         {/* Left Section */}
         <div className="flex gap-8 flex-1">
-          <Link href="#" className="flex items-center gap-1 font-medium">
+          <Link href="/#Drops" className="flex items-center gap-1 font-medium">
             New Drops <FcFlashOn />
           </Link>
-          <Link href="#" className="flex items-center gap-1 font-medium">
+          <Link href="/listing" className="flex items-center gap-1 font-medium">
             Catalog <FcShop />
           </Link>
-          <Link href="#" className="flex items-center gap-1 font-medium">
+          <Link href="/policies" className="flex items-center gap-1 font-medium">
             Policies <FcFile />
           </Link>
         </div>
@@ -25,16 +25,13 @@ function Navbar() {
         {/* Center Section */}
         <div className="flex justify-center">
           <h1 className="text-2xl font-extrabold tracking-wide">
-            ANIME CANVAS
+            <Link href='/'>ANIME CANVAS</Link>
           </h1>
         </div>
 
         {/* Right Section */}
         <div className="flex items-center gap-6 flex-1 justify-end">
-          <Link href="#" className="flex items-center">
-            <BiSearch className="text-xl" />
-          </Link>
-          <Link href="#" className="flex items-center p-2 rounded-full">
+          <Link href="/checkout" className="flex items-center p-2 rounded-full">
             <BsCart2 className="text-xl" />
           </Link>
         </div>
