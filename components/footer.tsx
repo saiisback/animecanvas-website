@@ -9,16 +9,17 @@ function Footer() {
         <h1 className="text-4xl">ANIME CANVAS</h1>
         <div>
           <ul>
-            <li><Link href="/#Drops">New Drops</Link></li>
-            <li><Link href="/listing">Shop</Link></li>
-            <li><Link href="https://www.instagram.com/animecanvas.in/">Social Media</Link></li>
+            <li><Link href="/policies/#TermsOfService">Terms of service</Link></li>
+            <li><Link href="/policies/#ShippingPolicy">Shipping policy</Link></li>
+            <li><Link href="/policies/#RefundPolicy">Refund policy</Link></li>
+            <li><Link href="/policies/#PrivacyPolicy">Privacy policy</Link></li>
           </ul>
         </div>
         <div>
           <ul>
-            <li>Terms and conditions</li>
-            <li>Refund Polices</li>
-            <li>Disclamer</li>
+            <li><Link href="/#Drops">New Drops</Link></li>
+            <li><Link href="/catlog">Shop</Link></li>
+            <li><Link href="https://www.instagram.com/animecanvas.in/">Social Media</Link></li>
           </ul>
         </div>
       </div>

@@ -14,7 +14,7 @@ function Navbar() {
           <Link href="/#Drops" className="flex items-center gap-1 font-medium">
             New Drops <FcFlashOn />
           </Link>
-          <Link href="/listing" className="flex items-center gap-1 font-medium">
+          <Link href="/catlog" className="flex items-center gap-1 font-medium">
             Catalog <FcShop />
           </Link>
           <Link href="/policies" className="flex items-center gap-1 font-medium">

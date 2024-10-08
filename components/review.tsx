@@ -2,7 +2,7 @@
 
 import React from "react";
 import { AiFillStar } from "react-icons/ai"; // Importing the star icon
-import { allreviews } from "@/lib/data"; // Import your reviews data
+import { allreviews } from "@/lib/reviews"; // Import your reviews data
 
 // Define the type for a single review
 interface Review {
