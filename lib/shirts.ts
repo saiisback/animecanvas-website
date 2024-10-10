@@ -1,5 +1,3 @@
-import { createGunzip } from "zlib";
-
 export const shirts=[
     {
         name:"one-piece shirt",
@@ -8,6 +6,7 @@ export const shirts=[
         size: ["S", "M", "L", "XL"],
         color: ["Black"],
         category: "Anime",
+        arrival:"New Arrival",
     },
     {
         name:"two-piece shirt",
@@ -15,6 +14,8 @@ export const shirts=[
         image: "anime.jpg",
         size: ["S", "M", "L", "XL"],
         color: ["Black"],
+        category: "Anime",
+        arrival:"New Arrival",
     },
     {
         name:"three-piece shirt",
@@ -22,6 +23,8 @@ export const shirts=[
         image: "anime.jpg",
         size: ["S", "M", "L", "XL"],
         color: ["Black"],
+        category: "Anime",
+        arrival:"New Arrival",
     },
     {
         name:"four-piece shirt",
@@ -29,6 +32,8 @@ export const shirts=[
         image: "anime.jpg",
         size: ["S", "M", "L", "XL"],
         color: ["White", "Black"],
+        category: "Anime",
+        arrival:"New Arrival",
     },
     {
         name:"five-piece shirt",
@@ -36,6 +41,8 @@ export const shirts=[
         image: "anime.jpg",
         size: ["S", "M", "L", "XL"],
         color: ["White", "Black"],
+        category: "Anime",
+        arrival:"New Arrival",
     },
     {
         name:"six-piece shirt",
@@ -43,6 +50,7 @@ export const shirts=[
         image: "anime.jpg",
         size: ["S", "M", "L", "XL"],
         color: ["White", "Black"],
+        category: "Motorsport",
     },
     {
         name:"seven-piece shirt",
@@ -50,6 +58,7 @@ export const shirts=[
         image: "anime.jpg",
         size: ["S", "M", "L", "XL"],
         color: ["White", "Black"],
+        category: "Motorsport",
     },
     {
         name:"eight-piece shirt",
@@ -57,6 +66,7 @@ export const shirts=[
         image: "anime.jpg",
         size: ["S", "M", "L", "XL"],
         color: ["White", "Black"],
+        category: "Motorsport",
     },
     {
         name:"nine-piece shirt",
@@ -64,5 +74,6 @@ export const shirts=[
         image: "anime.jpg",
         size: ["S", "M", "L", "XL"],
         color: ["White", "Black"],
+        category: "Motorsport",
     }
 ]

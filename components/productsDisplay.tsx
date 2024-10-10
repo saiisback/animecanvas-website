@@ -1,4 +1,3 @@
-// ProductsDisplay.tsx
 import React from "react";
 
 // Define the type for the products array
@@ -8,26 +7,38 @@ interface Product {
   image: string;
   size: string[];
   color: string[];
-  
+  category: string;
+  arrival?: string; // Optional property for arrival status
 }
 
 interface ProductsDisplayProps {
-  products: Product[];  // Ensure the products prop is expected
+  products: Product[];
 }
 
 const ProductsDisplay: React.FC<ProductsDisplayProps> = ({ products }) => {
   return (
     <div className="grid grid-cols-3 gap-4">
       {products.map((product) => (
-        <div key={product.name} className="border p-4 rounded-lg">
-          <img src={product.image} alt={product.name} className="h-40 w-full object-cover rounded-md mb-3" />
+        <div key={product.name} className="relative border p-4 rounded-lg">
+          {/* "New" label */}
+          {product.arrival === "New Arrival" && (
+            <div className="absolute top-2 left-2 bg-black text-white text-xs font-bold py-1 px-2 rounded-md animate-pulse">
+              New Arrival!!
+            </div>
+          )}
+          <img
+            src={product.image}
+            alt={product.name}
+            className="h-40 w-full object-cover rounded-md mb-3"
+          />
           <h2 className="font-bold">{product.name}</h2>
           <p className="text-sm">Price: ${product.price}</p>
           <p className="text-sm">Available Sizes: {product.size.join(", ")}</p>
           <p className="text-sm">Colors: {product.color.join(", ")}</p>
+          <p className="text-sm">Category: {product.category}</p>
           <button className="w-full mt-3 bg-black text-white py-2 rounded-lg font-bold hover:bg-gray-800">
-              VIEW
-            </button>
+            VIEW
+          </button>
         </div>
       ))}
     </div>

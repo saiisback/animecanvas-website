@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import React, { useState } from "react";
 import { shirts } from "@/lib/shirts"; // Import your shirts data
 import ProductsDisplay from "@/components/productsDisplay";
@@ -7,11 +8,12 @@ function ListingPage() {
   const [selectedSize, setSelectedSize] = useState<string[]>([]);
   const [selectedColor, setSelectedColor] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [showNewArrivals, setShowNewArrivals] = useState<boolean>(false); // New Arrivals filter state
 
   // Unique sizes, colors, and categories from the shirts data
   const uniqueSizes = Array.from(new Set(shirts.flatMap((shirt) => shirt.size)));
   const uniqueColors = Array.from(new Set(shirts.flatMap((shirt) => shirt.color)));
-  const uniqueCategories = ["Anime", "Motorsports"]; // Add categories dynamically in the future
+  const uniqueCategories = ["Anime", "Motorsport"]; // Add categories dynamically in the future
 
   // Function to handle size filter toggle
   const handleSizeToggle = (size: string) => {
@@ -37,14 +39,16 @@ function ListingPage() {
     setSelectedSize([]);
     setSelectedColor([]);
     setSelectedCategory(null);
+    setShowNewArrivals(false); // Reset New Arrivals filter
   };
 
-  // Filtered shirts based on selected size, color, and category
+  // Filtered shirts based on selected size, color, category, and new arrivals
   const filteredShirts = shirts.filter((shirt) => {
     const matchesSize = selectedSize.length === 0 || selectedSize.some((size) => shirt.size.includes(size));
     const matchesColor = selectedColor.length === 0 || selectedColor.some((color) => shirt.color.includes(color));
-    const matchesCategory = !selectedCategory || shirt.name.toLowerCase().includes(selectedCategory.toLowerCase());
-    return matchesSize && matchesColor && matchesCategory;
+    const matchesCategory = !selectedCategory || shirt.category.toLowerCase() === selectedCategory.toLowerCase();
+    const matchesNewArrival = !showNewArrivals || shirt.arrival === "New Arrival";
+    return matchesSize && matchesColor && matchesCategory && matchesNewArrival;
   });
 
   return (
@@ -109,6 +113,20 @@ function ListingPage() {
               </button>
             ))}
           </div>
+
+          {/* New Arrival Filter */}
+          <h2 className="font-bold text-lg mt-3">New Arrivals</h2>
+          <div>
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={showNewArrivals}
+                onChange={() => setShowNewArrivals(!showNewArrivals)}
+                className="mr-2"
+              />
+              Show New Arrivals
+            </label>
+          </div>
         </div>
 
         {/* Product Display Section */}
@@ -124,9 +142,9 @@ function ListingPage() {
             {selectedCategory && (
               <p className="text-sm">Selected Category: {selectedCategory}</p>
             )}
+            {showNewArrivals && <p className="text-sm">Showing New Arrivals</p>}
           </div>
           <div className="ml-5"><ProductsDisplay products={filteredShirts} /></div>
-          
         </div>
       </div>
     </div>
