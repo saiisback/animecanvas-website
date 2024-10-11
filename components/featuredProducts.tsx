@@ -1,5 +1,8 @@
 import React from "react";
-import { shirts } from '@/lib/shirts';  // Importing the product data
+import { shirts } from '@/lib/shirts';  
+import Link from "next/link";
+
+// Importing the product data
 
 // FeaturedProducts component
 const FeaturedProducts: React.FC = () => {
@@ -14,9 +17,9 @@ const FeaturedProducts: React.FC = () => {
           <br />
           New Drops
         </h1>
-        <button className="bg-black text-white py-3 px-8 rounded-lg hover:bg-gray-600 transition">
+        <Link href='/catlog'><button className="bg-black text-white py-3 px-8 rounded-lg hover:bg-gray-600 transition">
           Shop New Drops
-        </button>
+        </button></Link>
       </div>
 
       {/* Product grid */}
