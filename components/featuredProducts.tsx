@@ -13,7 +13,7 @@ const FeaturedProducts: React.FC = () => {
     <div className="mx-7 my-14 font-sans text-center max-w-6xl ">
       <div className="flex justify-between items-center">
         <h1 className="text-5xl font-bold mb-6 text-left flex-grow">
-          Don't Miss Out
+          Don&apos;t Miss Out
           <br />
           New Drops
         </h1>

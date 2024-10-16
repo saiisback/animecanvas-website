@@ -1,6 +1,5 @@
 import React from "react";
 import { FcFlashOn, FcShop } from "react-icons/fc";
-import { BiSearch } from "react-icons/bi";
 import { BsCart2 } from "react-icons/bs";
 import { FcFile } from "react-icons/fc";
 import Link from "next/link";

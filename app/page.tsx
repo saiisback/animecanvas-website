@@ -5,7 +5,7 @@ import FeaturedProducts from "@/components/featuredProducts";
 import Review from "@/components/review";
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {

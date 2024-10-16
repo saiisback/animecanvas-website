@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaHeart, FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 
 function Checkout() {
   return (

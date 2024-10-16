@@ -63,7 +63,7 @@ function Payment() {
                   Standard Delivery
                 </h3>
                 <p className="text-sm text-gray-500">
-                  Enter your address to see when you'll get your order
+                  Enter your address to see when you&apos;ll get your order
                 </p>
               </div>
               <p className="text-blue-600 font-bold">$6.00</p>
@@ -89,7 +89,7 @@ function Payment() {
               </label>
               <label className="flex items-center">
                 <input type="checkbox" className="mr-2" />
-                <span>I'm 13+ years old</span>
+                <span>I&apos;m 13+ years old</span>
               </label>
             </div>
 
@@ -139,7 +139,7 @@ function Payment() {
                   DROPSET TRAINER SHOES
                 </h3>
                 <p className="text-sm text-gray-500">
-                  Men's Road Running Shoes
+                  Men&apos;s Road Running Shoes
                 </p>
                 <p className="text-sm text-gray-500">
                   Enamel Blue/University White

@@ -40,7 +40,7 @@ function PrivacyPolicy() {
               <strong>Service Providers:</strong> We may share your information with trusted third-party service providers who assist us in operating our store, conducting business, or servicing you, as long as they agree to keep your information confidential.
             </li>
             <li>
-              <strong>Compliance with Laws:</strong> We may disclose your information when we believe it is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety.
+              <strong>Compliance with Laws:</strong> We may disclose your information when we believe it is appropriate to comply with the law, enforce our site policies, or protect ours or others &apos; rights, property, or safety.
             </li>
           </ul>
         </li>
