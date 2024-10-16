@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { BsCart } from 'react-icons/bs'; // Importing a cart icon
 
 function Hero() {

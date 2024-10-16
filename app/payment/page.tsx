@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 
 function Payment() {
   return (
@@ -128,10 +129,12 @@ function Payment() {
             </h2>
             <div className="flex items-center">
               <div className="w-24 h-24">
-                <img
-                  className="w-full h-full object-cover rounded-lg"
-                  src="https://example.com/shoe-image.jpg" // Replace with your product image URL
+                <Image
+                  src="https://example.com/shoe-image.jpg"
                   alt="Dropset Trainer Shoes"
+                  width={1200}  // Adjust as needed
+                  height={800}  // Adjust as needed
+                  className="w-full h-full object-cover rounded-lg"
                 />
               </div>
               <div className="ml-4">

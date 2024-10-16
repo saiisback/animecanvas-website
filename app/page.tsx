@@ -7,6 +7,7 @@ import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Image from 'next/image';
 
 export default function Home() {
   const { ref: heroRef, inView: heroInView } = useInView({ threshold: 0.3 });
@@ -108,9 +109,11 @@ export default function Home() {
             animate={controlsCategories}
             whileHover={{ scale: 1.05 }}
           >
-            <img
+            <Image
               src="/anime.jpg"
               alt="Anime"
+              width={600} // Adjust width as needed
+              height={400} // Adjust height as needed
               className="w-1/2 h-auto object-contain mx-auto px-6"
             />
             <div className="flex justify-between items-center mt-16 mb-0">
@@ -128,9 +131,11 @@ export default function Home() {
             animate={controlsCategories}
             whileHover={{ scale: 1.05 }}
           >
-            <img
+            <Image
               src="/motor.jpg"
               alt="Motorsport"
+              width={600} // Adjust width as needed
+              height={400} // Adjust height as needed
               className="w-1/2 h-auto object-contain mx-auto px-6"
             />
             <div className="flex justify-between items-center mt-16 mb-0">

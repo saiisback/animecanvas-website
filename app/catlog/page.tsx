@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { shirts } from "@/lib/shirts"; // Import your shirts data
 import ProductsDisplay from "@/components/productsDisplay";
+import Image from 'next/image';
 
 function ListingPage() {
   const [selectedSize, setSelectedSize] = useState<string[]>([]);
@@ -53,7 +54,13 @@ function ListingPage() {
 
   return (
     <div>
-      <img src="hero.png" alt="hero" className="w-[1200px] m-3 h-52 rounded-3xl" />
+      <Image
+  src="/hero.png"
+  alt="hero"
+  width={1200}
+  height={208} // Adjust height as per aspect ratio
+  className="m-3 rounded-3xl"
+/>
 
       {/* Header and Filters Reset */}
       <div className="m-5 flex justify-between items-center">

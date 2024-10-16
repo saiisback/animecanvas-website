@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import React, { useState } from "react";
+import Image from 'next/image';
 
 interface Product {
   name: string;
@@ -20,6 +21,7 @@ interface ProductModalProps {
 const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, isOpen }) => {
   if (!isOpen) return null; // Don't render if modal is closed
 
+  // State hooks for size, color, and quantity
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [quantity, setQuantity] = useState<number>(1); // State for quantity

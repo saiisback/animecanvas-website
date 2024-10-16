@@ -1,7 +1,7 @@
 import React from "react";
 import { shirts } from '@/lib/shirts';  
 import Link from "next/link";
-
+import Image from 'next/image';
 // Importing the product data
 
 // FeaturedProducts component

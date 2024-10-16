@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
+import Image from 'next/image';
 
 function Checkout() {
   return (
@@ -18,10 +19,11 @@ function Checkout() {
           <div className="flex items-center border-t border-gray-200 pt-4">
             {/* Product Image */}
             <div className="w-24 h-24 flex-shrink-0">
-              <img
-                className="w-full h-full object-cover rounded-lg"
-                src="anime.jpg" // Replace with your product image URL
+              <Image
+                src="/anime.jpg" // Replace with your product image URL
                 alt="Dropset Trainer Shoes"
+                layout="fill"
+                className="object-cover rounded-lg"
               />
             </div>
 
@@ -31,7 +33,7 @@ function Checkout() {
               <h3 className="text-lg font-bold text-gray-800">
                 DROPSET TRAINER SHOES
               </h3>
-              <p className="text-sm text-gray-500">Men's Road Running Shoes</p>
+              <p className="text-sm text-gray-500">Men&apos;s Road Running Shoes</p>
               <p className="text-sm text-gray-500">
                 Enamel Blue/University White
               </p>
@@ -52,7 +54,7 @@ function Checkout() {
               </div>
             </div>
           </div>
-          
+
         </div>
 
         {/* Order Summary Section */}

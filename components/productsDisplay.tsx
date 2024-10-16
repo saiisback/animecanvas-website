@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import ProductModal from "@/components/modals/productModal"; // Ensure this path is correct
+import Image from 'next/image';
+
 
 interface Product {
   name: string;
